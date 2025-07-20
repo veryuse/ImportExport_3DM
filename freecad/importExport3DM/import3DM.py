@@ -185,7 +185,7 @@ class File3dm:
             obj.Radius = geo.Radius
             if int(FreeCAD.Version()[3].split()[0]) > 29603:
                 obj.Angle1 = startAngle = toFCangle(geo.Arc.Center, geo.PointAtStart)
-                obj.Angle2 = startAngle + geo.Arc.AngleDegree
+                obj.Angle2 = startAngle + geo.Arc.AngleDegrees
             else:
                 obj.Angle0 = startAngle = toFCangle(geo.Arc.Center, geo.PointAtStart)
                 obj.Angle1 = startAngle + geo.Arc.AngleDegrees
